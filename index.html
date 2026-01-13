@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaumyyabrata Roy | Enterprise Transformation, AI & Automation Delivery Leader</title>
+
+  <!-- Tailwind & Lucide -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    :root {
+      --cobalt: #2563eb;
+      --slate-deep: #0f172a;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top left, #e0edff 0, #f8fafc 40%, #ffffff 80%);
+      color: #0f172a;
+      scroll-behavior: smooth;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(226, 232, 240, 0.96);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 38px -20px rgba(15, 23, 42, 0.65);
+      border-color: rgba(37, 99, 235, 0.7);
+    }
+
+    .skill-pill {
+      transition: all 0.18s;
+      cursor: default;
+    }
+
+    .skill-pill:hover {
+      background-color: var(--cobalt);
+      color: white;
+      transform: translateY(-1px);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #0f172a 0%, #2563eb 45%, #0f172a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes slideIn {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    .animate-grow {
+      animation: slideIn 1.3s ease-out forwards;
+    }
+
+    /* PRINT STYLES – compact A4 ~2 pages, allow cards to split */
+    @media print {
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: auto;
+      }
+
+      body {
+        background: #ffffff !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        font-size: 10px; /* was 9px */
+      }
+
+      h1 { font-size: 21px !important; } /* +1px */
+      h2 { font-size: 11px !important; } /* +1px */
+      h3 { font-size: 10px !important; } /* +1px */
+
+      p, li, span, a {
+        font-size: 9px !important;      /* was 8px */
+        line-height: 1.22 !important;   /* still tight so it fits */
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
+      header,
+      main {
+        max-width: 700px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      .max-w-6xl {
+        max-width: 700px !important;
+      }
+
+      header {
+        margin-bottom: 0.4rem !important;
+      }
+
+      .glass-card {
+        box-shadow: none !important;
+        transform: none !important;
+        backdrop-filter: none !important;
+        border: 1px solid #d1d5db;
+        padding: 6px 8px !important;   /* keep compact padding */
+        break-inside: auto;
+        page-break-inside: auto;
+      }
+
+      .glass-card:hover {
+        transform: none !important;
+      }
+
+      .mb-10, .mb-12 {
+        margin-bottom: 0.4rem !important;
+      }
+
+      .space-y-6 > :not([hidden]) ~ :not([hidden]) {
+        margin-top: 0.28rem !important;
+      }
+      .space-y-7 > :not([hidden]) ~ :not([hidden]) {
+        margin-top: 0.32rem !important;
+      }
+      .space-y-8 > :not([hidden]) ~ :not([hidden]) {
+        margin-top: 0.36rem !important;
+      }
+      .space-y-10 > :not([hidden]) ~ :not([hidden]) {
+        margin-top: 0.4rem !important;
+      }
+
+      .border-l-2 {
+        border-left-width: 1px !important;
+      }
+
+      .list-disc {
+        padding-left: 0.7rem !important;
+      }
+
+      /* no forced page break – let browser pack content efficiently */
+      .page-break-before {
+        page-break-before: auto !important;
+        break-before: auto !important;
+      }
+
+      @page {
+        size: A4;
+        margin: 0.5cm;
+      }
+    }
+  </style>
+</head>
+
+<body class="p-4 md:p-10 lg:p-12">
+  <div id="resume-root">
+    <!-- HEADER -->
+    <header class="max-w-6xl mx-auto mb-10 md:mb-12">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-6">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-bold tracking-tight gradient-text mb-2">
+            Shaumyyabrata Roy
+          </h1>
+          <p class="text-lg md:text-xl text-slate-600 font-medium mb-3">
+            Enterprise Transformation, AI &amp; Automation Delivery Leader
+          </p>
+
+          <div class="flex flex-wrap gap-3 text-xs md:text-sm text-slate-500">
+            <span class="flex items-center gap-1">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+              Dubai, UAE / Riyadh, KSA · Open to Global Relocation
+            </span>
+            <span class="flex items-center gap-1">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+              KSA: <a href="tel:+966582745571" class="hover:text-blue-600">+966 58 274 5571</a>
+            </span>
+            <span class="flex items-center gap-1">
+              <i data-lucide="phone-call" class="w-4 h-4"></i>
+              UAE (WhatsApp): <a href="tel:+971585921866" class="hover:text-blue-600">+971 58 592 1866</a>
+            </span>
+            <span class="flex items-center gap-1">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              <a href="mailto:shaumyyabrata.roy@gmail.com" class="hover:text-blue-600">
+                shaumyyabrata.roy@gmail.com
+              </a>
+            </span>
+            <span class="flex items-center gap-1">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+              <a href="https://www.linkedin.com/in/shaumyyabrata-roy-95275199" target="_blank"
+                 class="hover:text-blue-600">
+                /in/shaumyyabrata-roy-95275199
+              </a>
+            </span>
+          </div>
+        </div>
+
+        <!-- Download button -->
+        <div class="no-print flex flex-col items-end gap-3">
+          <button onclick="window.print()"
+            class="bg-slate-900 text-white px-5 py-2.5 rounded-full flex items-center gap-2 hover:bg-blue-600 transition-colors text-sm">
+            <i data-lucide="download" class="w-4 h-4"></i> Download PDF
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="max-w-6xl mx-auto space-y-8 md:space-y-10">
+
+      <!-- SUMMARY + CORE COMPETENCIES -->
+      <section class="grid grid-cols-1 lg:grid-cols-3 gap-7">
+        <!-- Left column -->
+        <div class="space-y-6">
+          <!-- Exec Summary -->
+          <section class="glass-card p-5 md:p-6 rounded-2xl">
+            <h3
+              class="text-xs font-semibold mb-3 flex items-center gap-2 uppercase tracking-[0.18em] text-slate-500">
+              <i data-lucide="user-check" class="text-blue-600 w-4 h-4"></i>
+              Executive Summary
+            </h3>
+            <p class="text-[13px] text-slate-700 leading-relaxed">
+              Head of Transformation, PMO, and Enterprise Architecture with 15+ years delivering large-scale change across banks and global enterprises. I lead end-to-end transformation, portfolio governance, vendor assurance, and enterprise-wide operating model design. Experienced in Business Process Management (BPM), process governance, and embedding cross-functional process ownership to drive efficiency, compliance, and measurable business value. I bring a strong combination of transformation leadership, Lean Six Sigma expertise, digital execution, and analytics consulting for Tier-1 global clients.
+            </p>
+          </section>
+
+          <!-- Core Competencies -->
+          <section class="glass-card p-5 md:p-6 rounded-2xl">
+            <h3
+              class="text-xs font-semibold mb-3 flex items-center gap-2 uppercase tracking-[0.18em] text-slate-500">
+              <i data-lucide="target" class="text-blue-600 w-4 h-4"></i>
+              Core Competencies &amp; Technology
+            </h3>
+            <ul class="text-[13px] text-slate-700 space-y-1.5 list-disc list-outside ml-4">
+              <li>
+                <strong>Transformation &amp; PMO Governance:</strong>
+                Enterprise-wide portfolio oversight, prioritization, risk control and executive reporting for multi-year change programs.
+              </li>
+              <li>
+                <strong>Program &amp; Project Delivery Management:</strong>
+                Owning end-to-end delivery for complex, multi-stakeholder initiatives, from business case and roadmap through execution, RAID and cutover.
+              </li>
+              <li>
+                <strong>Commercial &amp; Vendor Management:</strong>
+                SOW validation, cost and capacity checks, contract governance and tight control on delivery commitments and budgets.
+              </li>
+              <li>
+                <strong>Execution &amp; Turnaround:</strong>
+                Stabilising delayed programs, tightening controls, resetting scope and rhythm, and taking work from red to steady state across functions and partners.
+              </li>
+              <li>
+                <strong>Operating Model, AI &amp; Technology Change:</strong>
+                Designing target operating models, shaping AI and automation opportunities, guiding build-vs-buy decisions and steering cloud and application modernisation.
+              </li>
+            </ul>
+
+            <!-- NEW BPM SUB-SECTION -->
+            <p class="mt-3 text-[13px] font-semibold text-slate-700">
+              Business Process Management &amp; Operational Excellence
+            </p>
+            <ul class="text-[13px] text-slate-700 space-y-1.5 list-disc list-outside ml-4 mt-1.5">
+              <li>Enterprise process governance &amp; process ownership models.</li>
+              <li>Process standardization, mapping, and lifecycle management.</li>
+              <li>Process mining alignment and tooling exposure (HOPEX, Celonis, Mindzie – evaluation &amp; adoption).</li>
+              <li>Lean Six Sigma Black Belt–driven process re-engineering.</li>
+              <li>KPI and maturity model design for process improvement.</li>
+              <li>Embedding process-centric culture across business and technology units.</li>
+            </ul>
+          </section>
+        </div>
+
+        <!-- Right: metrics + professional experience -->
+        <div class="lg:col-span-2 space-y-6">
+          <!-- Metrics -->
+          <section class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div class="glass-card rounded-2xl p-3 text-center">
+              <p class="text-xl font-bold text-blue-700">160+</p>
+              <p class="text-[10px] uppercase tracking-widest text-blue-500">Initiatives Led</p>
+            </div>
+            <div class="glass-card rounded-2xl p-3 text-center">
+              <p class="text-xl font-bold text-emerald-700">AED 18M</p>
+              <p class="text-[10px] uppercase tracking-widest text-emerald-500">Annual Value</p>
+            </div>
+            <div class="glass-card rounded-2xl p-3 text-center">
+              <p class="text-xl font-bold text-purple-700">80%</p>
+              <p class="text-[10px] uppercase tracking-widest text-purple-500">KYC Cycle-Time ↓</p>
+            </div>
+            <div class="glass-card rounded-2xl p-3 text-center">
+              <p class="text-xl font-bold text-slate-800">5</p>
+              <p class="text-[10px] uppercase tracking-widest text-slate-500">Regions</p>
+            </div>
+          </section>
+
+          <!-- Professional Experience -->
+          <section>
+            <h2
+              class="text-xs font-semibold mb-3 flex items-center gap-2 uppercase tracking-[0.18em] text-slate-500">
+              <i data-lucide="briefcase" class="text-blue-600 w-4 h-4"></i>
+              Professional Experience
+            </h2>
+
+            <div class="relative pl-6 border-l-2 border-slate-200 space-y-5">
+
+              <!-- Riyad Bank -->
+              <div class="glass-card p-5 md:p-6 rounded-2xl relative">
+                <span class="absolute -left-3 top-4 w-5 h-5 rounded-full bg-blue-600 border-4 border-white"></span>
+                <div class="flex justify-between items-start mb-2 gap-4">
+                  <div>
+                    <h3 class="text-base md:text-lg font-semibold">
+                      Enterprise Architect – Business Technology &amp; Strategy
+                    </h3>
+                    <p class="text-blue-600 font-semibold text-sm">
+                      Riyad Bank HQ · Riyadh, Saudi Arabia
+                    </p>
+                  </div>
+                  <span
+                    class="text-[11px] font-mono bg-blue-50 text-blue-700 px-3 py-1 rounded-full whitespace-nowrap">
+                    Nov 2025 – Present
+                  </span>
+                </div>
+                <p class="text-xs md:text-sm text-slate-700 mb-2">
+                  Reporting to the Head of Business Technology and working with PMO and business leaders to bring structure,
+                  commercial discipline and delivery control to major digital and core-platform programs.
+                </p>
+                <ul class="list-disc list-outside ml-4 text-xs md:text-sm text-slate-700 space-y-1.5">
+                  <li>Shape the Concept-to-Contract stage for core banking work, defining scope, plans, budget limits, and vendor responsibilities.</li>
+                  <li>Review and challenge major SOWs before approvals, checking estimates, capacity, dependencies, and delivery risks.</li>
+                  <li>Set up the Watchtower governance model to tighten funding discipline and give leadership a clear view of progress and risks.</li>
+                  <li>Simplify the application and system landscape by removing overlaps and aligning cloud, integration, and data platforms.</li>
+                  <li>Spot automation opportunities by reviewing current processes and eliminating manual work and duplicate data flows.</li>
+                  <li>Create HLDs for key journeys like MSME, clarifying business needs, mapping current services, and shaping the future design for Appian delivery.</li>
+                  <li>Lead process governance workstreams, defining roles, ownership, and controls for ongoing transformation programs.</li>
+                </ul>
+              </div>
+
+              <!-- FAB -->
+              <div class="glass-card p-5 md:p-6 rounded-2xl relative">
+                <span class="absolute -left-3 top-4 w-5 h-5 rounded-full bg-slate-300 border-4 border-white"></span>
+                <div class="flex justify-between items-start mb-2 gap-4">
+                  <div>
+                    <h3 class="text-base md:text-lg font-semibold">
+                      Lead – Digital Transformation, Automation &amp; AI
+                    </h3>
+                    <p class="text-blue-600 font-semibold text-sm">
+                      First Abu Dhabi Bank (FAB) · Dubai, United Arab Emirates
+                    </p>
+                  </div>
+                  <span
+                    class="text-[11px] font-mono bg-slate-100 text-slate-700 px-3 py-1 rounded-full whitespace-nowrap">
+                    Aug 2021 – Oct 2025
+                  </span>
+                </div>
+                <p class="text-xs md:text-sm text-slate-700 mb-2">
+                  Built and led the bank’s Intelligent Automation function, owning a multi-country portfolio of AI, automation
+                  and analytics initiatives across business and technology.
+                </p>
+                <ul class="list-disc list-outside ml-4 text-xs md:text-sm text-slate-700 space-y-1.5">
+                  <li>Set up a central automation operating model, bringing scattered vendor-driven work under a single
+                    governed transformation portfolio with clear intake, business case and prioritization.</li>
+                  <li>Worked with a Tier-1 consultancy to establish and steady the Automation CoE, growing internal
+                    capability from 4 to 50 FTEs and reducing long-term vendor dependence and cost.</li>
+                  <li>Acted as primary program and delivery owner for 160+ automation and analytics initiatives, running
+                    scope, plans, RAID, stakeholder forums and benefit tracking across five countries.</li>
+                  <li>Built a governance and approval framework with Finance, CISO, Risk and SAMA/GDPR teams, enabling
+                    faster delivery while maintaining regulatory and security discipline.</li>
+                  <li>Delivered AED 18M annual value from Credit Bundles, AED 6.5M per cycle from Cards GTM automation, and
+                    30,000+ KYC cases automated yearly with an 80% cycle-time reduction.</li>
+                  <li>Redesigned and standardized cross-functional business processes as part of automation scale-up, improving cycle times, compliance, and operational throughput.</li>
+                </ul>
+              </div>
+
+              <!-- Consulting Manager -->
+              <div class="glass-card p-5 md:p-6 rounded-2xl relative page-break-before">
+                <span class="absolute -left-3 top-4 w-5 h-5 rounded-full bg-slate-300 border-4 border-white"></span>
+                <div class="flex justify-between items-start mb-2 gap-4">
+                  <div>
+                    <h3 class="text-base md:text-lg font-semibold">
+                      Consulting Manager – Lean Digital Transformation
+                    </h3>
+                    <p class="text-blue-600 font-semibold text-sm">
+                      Genpact · India (Global Delivery for UK &amp; US)
+                    </p>
+                  </div>
+                  <span
+                    class="text-[11px] font-mono bg-slate-100 text-slate-700 px-3 py-1 rounded-full whitespace-nowrap">
+                    Jul 2019 – Jun 2021
+                  </span>
+                </div>
+                <ul class="list-disc list-outside ml-4 text-xs md:text-sm text-slate-700 space-y-1.5">
+                  <li>Managed transformation programs for GE, Boeing and Thomson Reuters, owning financials, delivery
+                    performance and contract outcomes against KPIs and gain-share targets.</li>
+                  <li>Oversaw SLAs on quality and cycle time, working with global teams to keep delivery on track and unlock
+                    agreed commercial upside.</li>
+                  <li>Recovered at-risk initiatives by resetting delivery plans, reshaping workstreams and renegotiating
+                    expectations with senior stakeholders to reach stable go-live.</li>
+                  <li>Worked closely with technology and data teams to align digital, automation and analytics solutions
+                    with client operating models and control environments.</li>
+                  <li>Delivered process transformation programs for global clients, embedding Lean Six Sigma practices and stabilizing end-to-end operational processes.</li>
+                </ul>
+              </div>
+
+              <!-- Assistant Manager -->
+              <div class="glass-card p-5 md:p-6 rounded-2xl relative">
+                <span class="absolute -left-3 top-4 w-5 h-5 rounded-full bg-slate-300 border-4 border-white"></span>
+                <div class="flex justify-between items-start mb-2 gap-4">
+                  <div>
+                    <h3 class="text-base md:text-lg font-semibold">
+                      Assistant Manager – Analytics
+                    </h3>
+                    <p class="text-blue-600 font-semibold text-sm">
+                      Genpact · United Kingdom &amp; India (GE Aviation)
+                    </p>
+                  </div>
+                  <span
+                    class="text-[11px] font-mono bg-slate-100 text-slate-700 px-3 py-1 rounded-full whitespace-nowrap">
+                    Feb 2017 – Jun 2019
+                  </span>
+                </div>
+                <ul class="list-disc list-outside ml-4 text-xs md:text-sm text-slate-700 space-y-1.5">
+                  <li>Led a major GE Aviation billing transformation during a legacy platform migration, designing an
+                    external data and automation solution that avoided a costly interim upgrade and cut billing cycle
+                    time from 5 days to 1 hour.</li>
+                  <li>Directed the migration of legacy risk models from MATLAB to Python, coordinating with Risk and IT to
+                    deliver a clean handover with zero defects and no downtime.</li>
+                </ul>
+              </div>
+
+              <!-- Business Analyst -->
+              <div class="glass-card p-5 md:p-6 rounded-2xl relative">
+                <span class="absolute -left-3 top-4 w-5 h-5 rounded-full bg-slate-300 border-4 border-white"></span>
+                <div class="flex justify-between items-start mb-2 gap-4">
+                  <div>
+                    <h3 class="text-base md:text-lg font-semibold">
+                      Business Analyst – Analytics
+                    </h3>
+                    <p class="text-blue-600 font-semibold text-sm">
+                      Genpact · India &amp; United States
+                    </p>
+                  </div>
+                  <span
+                    class="text-[11px] font-mono bg-slate-100 text-slate-700 px-3 py-1 rounded-full whitespace-nowrap">
+                    May 2014 – Feb 2017
+                  </span>
+                </div>
+                <ul class="list-disc list-outside ml-4 text-xs md:text-sm text-slate-700 space-y-1.5">
+                  <li>Managed complex escalation and pricing models for aviation contracts, keeping billing forecasts
+                    accurate despite fluctuating market rates and shifting contract terms.</li>
+                  <li>Led the move from Cognos to Hyperion SmartView, automating P&amp;L and balance sheet reporting,
+                    cutting planning effort by 40% and improving financial visibility for leadership.</li>
+                </ul>
+              </div>
+
+              <!-- FP&A Specialist -->
+              <div class="glass-card p-5 md:p-6 rounded-2xl relative">
+                <span class="absolute -left-3 top-4 w-5 h-5 rounded-full bg-slate-300 border-4 border-white"></span>
+                <div class="flex justify-between items-start mb-2 gap-4">
+                  <div>
+                    <h3 class="text-base md:text-lg font-semibold">
+                      FP&amp;A Specialist / Process Developer
+                    </h3>
+                    <p class="text-blue-600 font-semibold text-sm">
+                      Genpact · India &amp; United States
+                    </p>
+                  </div>
+                  <span
+                    class="text-[11px] font-mono bg-slate-100 text-slate-700 px-3 py-1 rounded-full whitespace-nowrap">
+                    Apr 2009 – Apr 2014
+                  </span>
+                </div>
+                <ul class="list-disc list-outside ml-4 text-xs md:text-sm text-slate-700 space-y-1.5">
+                  <li>Recovered USD 500K in missed discounts and penalties through detailed financial and process reviews,
+                    directly improving client profitability.</li>
+                  <li>Built VBA automation for P&amp;L and balance sheet reporting, reducing manual work to a single click
+                    and speeding up monthly and quarterly close cycles.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- EDUCATION + CERTIFICATIONS + DETAILED TECH -->
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-7">
+        <!-- Education & Certifications -->
+        <section class="glass-card p-5 md:p-6 rounded-2xl">
+          <h3
+            class="text-xs font-semibold mb-3 flex items-center gap-2 uppercase tracking-[0.18em] text-slate-500">
+            <i data-lucide="graduation-cap" class="text-blue-600 w-4 h-4"></i>
+            Education &amp; Certifications
+          </h3>
+          <ul class="text-[13px] text-slate-700 space-y-1.5 list-disc list-outside ml-4">
+            <li><strong>Bachelor of Commerce (Honours)</strong> – University of Calcutta</li>
+            <li><strong>Project Management Professional (PMP®)</strong></li>
+            <li><strong>Certified Lean Six Sigma Black Belt</strong> – GAQM</li>
+            <li><strong>Cloud Architecture:</strong> AWS Certified Solutions Architect (Associate), Microsoft Azure
+              Solutions Architect, Google Cloud (GCP) Solutions Architect</li>
+            <li><strong>AI &amp; Automation:</strong> Dataiku ML Practitioner, UiPath Automation Suite, Microsoft Power
+              Platform Fundamentals</li>
+            <li><strong>BPM Frameworks &amp; Process Mining:</strong> Governance models, process lifecycle design, and tooling evaluation (HOPEX, Celonis, Mindzie).</li>
+          </ul>
+        </section>
+
+        <!-- Technical Arsenal & Frameworks -->
+        <section class="glass-card p-5 md:p-6 rounded-2xl">
+          <h3
+            class="text-xs font-semibold mb-3 flex items-center gap-2 uppercase tracking-[0.18em] text-slate-500">
+            <i data-lucide="cpu" class="text-blue-600 w-4 h-4"></i>
+            Technical Arsenal &amp; Frameworks
+          </h3>
+          <ul class="text-[13px] text-slate-700 space-y-1.5 list-disc list-outside ml-4">
+            <li><strong>Architecture &amp; Governance:</strong> TOGAF, Zachman, Open Group standards, SAMA/NORA controls</li>
+            <li><strong>Change &amp; Transformation:</strong> ADKAR, Kotter, OCM practices</li>
+            <li><strong>Enterprise Platforms:</strong> Temenos T24, SAP CRM, Oracle, Dynamics 365</li>
+            <li><strong>Governance &amp; Delivery Tools:</strong> Alfabet, JIRA (advanced workflows), Confluence, ServiceNow</li>
+            <li><strong>Analytics &amp; Planning:</strong> Python (Pandas), Dataiku, Power BI, Tableau, Hyperion</li>
+            <li><strong>Delivery Methods:</strong> Agile (Scrum/Kanban), SDLC, VSM, SIPOC, RCA, SAFe</li>
+            <li><strong>Data &amp; Integration:</strong> Hands-on work with SQL/NoSQL, batch and streaming patterns to
+              evaluate and support solution design.</li>
+            <li><strong>BPM &amp; Process Excellence:</strong> Business Process Management (BPM); process governance &amp; ownership models; process mining familiarity (HOPEX, Celonis, Mindzie); Lean Six Sigma Black Belt–driven process re-engineering; operating model design &amp; process standardization.</li>
+          </ul>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
+
